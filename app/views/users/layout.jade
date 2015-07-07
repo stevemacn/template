@@ -1,0 +1,20 @@
+extends ../includes/boilerplate.jade 
+block header 
+    include ../includes/header.jade 
+
+block content
+    
+    .container(style="margin-top:50px;padding-bottom:125px;")
+        .col-lg-6(style = "")
+            block desc
+        .col-lg-6(style = "")
+                div(style="min-height:50px;")
+                    block validate
+                block form
+
+block js
+    script(type='text/javascript' 
+            src='/components/platform/platform.js')
+    link(rel="import", 
+            href="components/core-header-panel/core-header-panel.html")            
+block footerjs

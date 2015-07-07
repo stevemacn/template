@@ -1,0 +1,29 @@
+div.navbar-left.navbar-header
+    ul.nav.navbar-nav(style="margin:0;")
+        li(style="margin:0px;")
+          a#heading(ng-hide="hide", style="float:left;")  
+            timer(style="color:#428BCA",
+               finish-callback="mt.submit()"
+               countdown="cd", 
+               interval="1000"
+            ) 
+                b Timer - 
+                {{minutes}}:{{sseconds}}
+          a#heading(style="float:left;")
+            paper-progress(style="background-color:#428BCA;",
+                value="{{progress}}")           
+
+paper-button.navbar-right(icon="menu", ng-click='toggle()', 
+    style="color:#428BCA;margin:0px;").navbar-toggle.collapsed
+                        
+div.navbar-right.navbar-collapse.collapse#navcol(
+            ng-class="isToggled",style="height:auto;")
+    ul.nav.navbar-nav(style=" margin-right:10px; max-width:300px;height:auto;")
+     if (!user)
+        li
+            a#heading(href="/login") Log In 
+     if (user)
+        li 
+            a#heading(href="/") #{user.uid} 
+        li 
+            a#heading(href="/logout") Log Out 

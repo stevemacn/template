@@ -1,0 +1,31 @@
+{
+  "name": "bridgesapi",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "modernizr": "latest",
+    "d3": "latest",
+    "jquery": "latest",
+    "css-toggle-switch": "~2.1.5",
+    "angular": "latest",
+    "polymer": "Polymer/polymer#~0.4.0",
+    "core-scaffold": "Polymer/core-scaffold#~0.4.0",
+    "paper-dialog": "Polymer/paper-dialog#~0.4.0",
+    "paper-button": "Polymer/paper-button#~0.4.0",
+    "bootstrap": "~3.2.0",
+    "moment": "~2.8.3",
+    "paper-radio-group": "Polymer/paper-radio-group#~0.4.0",
+    "paper-checkbox": "Polymer/paper-checkbox#~0.4.0",
+    "paper-input": "Polymer/paper-input#~0.4.0",
+    "ng-polymer-elements": "~0.1.0",
+    "paper-fab": "Polymer/paper-fab#~0.4.1",
+    "paper-progress": "Polymer/paper-progress#~0.4.1",
+    "angular-timer": "~1.1.7",
+    "angular-bootstrap-show-errors": "~1.1.0",
+    "core-toolbar": "Polymer/core-toolbar#~0.4.1"
+  }
+}

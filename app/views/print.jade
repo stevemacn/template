@@ -1,0 +1,22 @@
+extends ./includes/boilerplate.jade 
+block header 
+    include ./includes/header.jade 
+
+block content
+    
+    .container(style="margin-top:50px;")
+        #{tests}
+        each quiz in tests
+            h1=quiz.title
+            hr
+            each item in quiz.quiz
+                h4=item.text
+                each m in item.options
+                    p=m
+
+block js
+    script(type='text/javascript' 
+            src='/components/platform/platform.js')
+    link(rel="import", 
+            href="components/core-header-panel/core-header-panel.html")            
+block footerjs

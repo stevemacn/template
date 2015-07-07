@@ -1,0 +1,49 @@
+doctype html
+html(lang="en", style="height:100%;")
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width')
+        title=title
+        
+        link(rel='stylesheet', 
+            href='/components/bootstrap/dist/css/bootstrap.min.css')
+
+        //polymer elements
+        script(type='text/javascript' 
+            src='/components/platform/platform.js')
+        link(rel="import",
+            href="vulcanized.html")
+    
+        //angular app
+        script(type="text/javascript",
+            src='components/angular/angular.min.js')
+        
+        script(type="text/javascript",
+            src='/app/ang.js')
+        
+        script.
+            window.addEventListener('polymer-ready', function(ev) { 
+                startAngular() 
+                angular.bootstrap(wrap(document), ['quiz']);
+            });
+    
+        link(rel='stylesheet', href='/css/polymer.css')
+
+        block css
+
+    body(style="height:100%;")
+
+        core-header-panel(flex, main, mode="standard",
+                style="height:100%;min-height:700px;")
+                
+            core-toolbar(ng-controller="myTimer as mt", 
+                style="background-color:#2c3e50;color:#428BCA;")  
+                nav.navbar(style="background-color:#2c3e50;color:#428BCA; width:100%;margin:0;")    
+                    include ./header.jade
+                include ./inc/consent.jade 
+                include ./inc/warning.jade    
+            div.content
+                .container(style="margin-top:50px; ")
+                    block form
+        block footerjs
+

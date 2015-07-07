@@ -1,0 +1,25 @@
+extends ./includes/boilerplate.jade 
+block header 
+    include ./includes/header.jade 
+
+block content
+
+  .well(style="margin:5%;")
+    h2 Admin links
+    ul
+        each quiz in tests
+                h3
+                    a(href="/admin/"+quiz) #{quiz}
+
+  .well(style="margin:5%;")
+      h2.danger Danger!
+      ul
+          h3
+            a(href="/admin/cleanDatabase") kill database
+
+block js
+    script(type='text/javascript' 
+            src='/components/platform/platform.js')
+    link(rel="import", 
+            href="components/core-header-panel/core-header-panel.html")            
+block footerjs

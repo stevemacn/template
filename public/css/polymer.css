@@ -1,0 +1,20 @@
+#heading {
+    color: #428BCA;
+    font-size:1.5em;
+    margin:0px;
+}
+
+paper-progress::shadow #activeProgress {
+    background-color: #428BCA;
+}
+#activeProgress {
+    background-color: #428BCA;
+}
+
+.css-form input.ng-invalid.ng-dirty {
+    background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-dirty {
+    background-color: #78FA89;
+}

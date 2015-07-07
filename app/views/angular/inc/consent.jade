@@ -1,0 +1,22 @@
+paper-dialog(heading="Informed consent", transition="paper-dialog-transition-bottom", opened="false", autoCloseDisabled, backdrop, style="width:50%;")
+    hr
+
+    p The study will take less than 60 minutes and requires only one visit. 
+        strong To express our gratitude you will receive a $5 Starbuck's gift card.
+
+    p You are a volunteer. The decision to participate in this study is completely up to you. If you decide to be in the study, you may stop at any time. You will not be treated any differently if you decide not to participate or if you stop once you have started.
+
+    p UNC Charlotte wants to make sure that you are treated in a fair and respectful manner. Contact the University’s Research Compliance Office (704.687.1871 or uncc-irb@uncc.edu) if you have any questions about how you are treated as a study participant. If you have any questions about the project, please contact Stephen MacNeil (smacnei2@uncc.edu) or Dr. Celine Latulipe (clatulip@uncc.edu; 908.500.4515).
+
+    p 
+        strong By clicking accept you are agreeing to proceeding with our experiment and ensuring that you are at least 18 years of age, and agree to participate willingly in this research project. You can print this consent form by clicking the print icon in the bottom left corner.
+
+    a(href="/img/consent.pdf", dismissive)
+        paper-fab(icon='print', dismissive, 
+            style="color:white; background:steelblue").mini
+
+
+    paper-fab(icon="close", affirmative, style="color:white;",onclick="parent.location='/logout'").mini
+    paper-fab( icon="check",affirmative, focused, 
+        ng-click="startTimer()", 
+        autofocus, style="color:white; background:green; margin-left:10px;").mini

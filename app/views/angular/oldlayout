@@ -1,0 +1,15 @@
+extends ./boilerplate.jade 
+block header 
+    include ./header.jade 
+
+block content
+    
+    .container(style="margin-top:50px;")
+        block form
+
+block js
+    script(type='text/javascript' 
+            src='/components/platform/platform.js')
+    link(rel="import", 
+            href="components/core-header-panel/core-header-panel.html")            
+block footerjs

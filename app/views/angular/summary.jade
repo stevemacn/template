@@ -1,0 +1,91 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width')
+        title=title
+        
+        link(rel='stylesheet', 
+            href='/components/bootstrap/dist/css/bootstrap.min.css')
+                
+        //polymer elements
+        script(type='text/javascript' 
+            src='/components/platform/platform.js')
+        link(rel="import", 
+            href="components/core-header-panel/core-header-panel.html") 
+        link(rel="import", 
+            href="components/paper-dialog/paper-dialog.html")
+        link(rel="import",
+            href="components/paper-dialog/paper-dialog-transition.html")
+        link(rel="import",
+            href="components/paper-button/paper-button.html")
+        link(rel="import", 
+            href="components/paper-radio-group/paper-radio-group.html")
+        link(rel="import", 
+            href="components/paper-checkbox/paper-checkbox.html")
+        link(rel="import", 
+            href="components/paper-input/paper-input.html")
+        link(rel="import",
+            href="components/paper-fab/paper-fab.html")
+        link(rel="import", 
+            href="components/paper-progress/paper-progress.html")
+        
+        link(rel='stylesheet', href='/css/polymer.css')
+        
+    body(ng-app="quiz", style="height:100%;")
+
+
+        core-header-panel(flex, mode="standard",
+            style="min-height:700px; background-color:#2c3e50")
+            core-toolbar  
+
+                script.
+                    function toggle() {
+                        var el = document.getElementById("navcol")
+                        console.log(el)
+                        el.classList.toggle('collapse')    
+                    } 
+
+
+                div.navbar-left.navbar-header
+                    ul.nav.navbar-nav(style="margin:0;")
+                        li(style="margin:0px;")
+                            a(href="/quiz", ng-hide="hide", 
+                                style="float:left;") 
+                                    if (!apikey) 
+                                        p#heading Complete the survey before redeeming your gift. Click to continue! 
+                                    if (apikey)
+                                         p#heading Please use the code: #{apikey} to redeem your gift 
+                paper-button.navbar-right(icon="menu", data-toggle="collapse", 
+                    onclick='toggle()', 
+                    style="color:#428BCA; margin:0px;").navbar-toggle.collapsed
+                                        
+                div.navbar-right.navbar-collapse.collapse#navcol(
+                            ng-class="isToggled",style="height:auto;")
+                    ul.nav.navbar-nav(style=" margin-right:10px; max-width:300px; height:auto;")
+                     if (!user)
+                        li
+                            a#heading(href="/login") Log In 
+                     if (user)
+                        li 
+                            a#heading(href="/") #{user.uid} 
+                        li 
+                            a#heading(href="/logout") Log Out 
+                                
+                
+                
+                
+                
+                
+            center.content
+                .container(style="color:white; margin-top:50px;")
+                  
+                  if (apikey)  
+                      
+                        img(alt="Thank you so much!",
+                         src="/img/tag.png",
+                         style="margin-top:15px;max-width:650px;max-height:433px;").navbar-toggle.collapsed
+                      
+                        img(alt="Thank you so much!",
+                         src="/img/tag.png",
+                         style="margin-top:15px;max-width:810px;max-height:540px;").navbar-collapse.collapse

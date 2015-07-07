@@ -1,0 +1,10 @@
+paper-dialog(heading="Stop, take a break!", id="rest", transition="paper-dialog-transition-bottom", opened="false", autoCloseDisabled, backdrop, style="width:50%;")
+    hr
+
+    p(style="color:firebrick;")
+
+    p This is an opportunity to rest between sections. You can move on to the next section when you are ready but you will not have a chance to pause again until that section is complete.
+
+    paper-fab( icon="check",affirmative, focused, 
+        ng-click="startTimer()", 
+        autofocus, style="color:white; background:green; margin-left:10px;").mini

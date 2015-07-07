@@ -1,0 +1,36 @@
+{
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "app.js",
+        "test": "grunt test",
+        "postinstall": "./node_modules/bower/bin/bower install"
+    },
+    "dependencies": {
+        "npm":"latest",
+        "express": "3.5.0",
+        "csv-write-stream":"latest",
+        "fs":"latest",
+        "jade": "latest",
+        "mongoose": "latest",
+        "passport": "latest",
+        "passport-twitter": "latest",
+        "passport-local": "latest",
+        "socket.io": "latest",
+        "streamable": "latest",
+        "crypto": "latest",
+        "underscore": "latest",
+        "connect-mongo": "*",
+        "connect-flash": "*",
+        "view-helpers": "*",
+        "request": "~2.22.0",
+        "bower":"*"
+    },
+    "devDependencies": {
+        "grunt": "latest",
+        "grunt-develop":"latest",
+        "grunt-contrib-watch":"latest",
+        "grunt-contrib-compass":"latest",
+        "async": "latest"
+    }
+}
